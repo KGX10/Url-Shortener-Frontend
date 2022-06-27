@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap");
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Noto Sans", sans-serif !important;
+  h1.main-heading {
+    white-space: nowrap;
+    padding: 1rem;
+    width: 80%;
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    @media (max-width: 992px) {
+      font-size: 32px;
+      width: 100%;
+    }
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-weight: bold;
+  }
+  &__inputfield {
+    width: auto;
+    display: flex;
+    @media (min-width: 992px) {
+      min-width: 60%;
+    }
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 18px;
+    @media (max-width: 992px) {
+      width: 90%;
+    }
+    @media (max-width: 540px) {
+      font-size: 14px;
+      height: 48px;
+    }
+    input {
+      flex: 3;
+      padding: 1rem;
+      background-color: azure;
+      border: 2px solid aliceblue;
+      border-radius: 8px 0px 0px 8px;
+      color: darkslategray;
+      font-weight: 700;
+      font-style: italic;
+      height: 100%;
+      &:focus-visible {
+        outline: none;
+      }
+      @media (max-width: 540px) {
+        padding: 0.25rem;
+      }
+    }
+    button {
+      flex: 2;
+      height: 100%;
+      border-width: 0px;
+      background-color: rgb(62, 133, 62);
+      color: whitesmoke;
+      font-style: italic;
+      padding: 1rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border-radius: 0px 8px 8px 0px;
+      @media (max-width: 540px) {
+        padding: 0.5rem;
+      }
+    }
+  }
+  &__displayfield {
+    padding: 2rem;
+
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 540px) {
+      padding: 0.5rem;
+      flex-direction: column;
+    }
+    &__shortUrl {
+      padding: 0.5rem;
+      color: slategrey;
+      font-size: 18px;
+
+      font-weight: bold;
+      border-radius: 4px 0px 0px 4px;
+      background-color: whitesmoke;
+      @media (max-width: 540px) {
+        font-size: 14px;
+        border-radius: 4px;
+      }
+    }
+    &__copyButton {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      background-color: slategray;
+      color: whitesmoke;
+      font-weight: bolder;
+      border-radius: 0px 4px 4px 0px;
+      @media (max-width: 540px) {
+        margin: 0.5rem;
+        border-radius: 4px;
+      }
+    }
+
+    &__copied {
+      color: whitesmoke;
+      font-weight: 600;
+      font-style: italic;
+      margin: 0.5rem;
+    }
+  }
+  .error-message {
+    margin-top: 2rem;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.spinner-border {
+  margin: 2rem;
+}
